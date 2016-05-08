@@ -1,0 +1,37 @@
+<%=  form_for(@articulo) do |f| %>
+    <% if @articulo.errors.any? %>
+        <div id="error_explanation"> </div>
+        <h2><%= pluralize(@articulo.errors.count, "error") %> Prohibido guardar este Articulo:</h2>
+
+        <ul>
+          <% @articulo.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+    </div>
+    <div class="field">
+      <%= f.label :stock %>
+      <%= f.text_field :stock %>
+    </div>
+    <div class="field">
+      <%= f.label :precio_venta %>
+      <%= f.text_field :precio_venta %>
+    </div>
+    <div class="field">
+      <%= f.label :precio_compra %>
+      <%= f.text_field :precio_compra %>
+    </div>
+    <div class="field">
+      <%= f.label :descripcion %>
+      <%= f.text_area :descripcion %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

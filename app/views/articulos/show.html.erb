@@ -1,0 +1,28 @@
+<div class="panel panel-primary"><h3><%= @articulo.nombre %></h3></div>
+
+<% if notice.nil?%>
+    <p id="notice"><%= notice %></p>
+<% else %>
+    <div class="alert alert-success" role="alert"><p id="notice"><%= notice %></p></div>
+<% end %>
+
+<p>
+  <strong>Nombre: </strong>
+  <%= @articulo.nombre.to_s %>
+</p>
+<p>
+  <strong>Stock: </strong>
+  <%= @articulo.stock.to_s %>
+</p>
+<p>
+  <strong>Precio Compra: </strong>
+  <%= @articulo.precio_compra.to_s %>
+</p>
+<p>
+  <strong>Precio Venta: </strong>
+  <%= @articulo.precio_venta.to_s %>
+</p>
+<p>
+  <strong>Descripción: </strong>
+  <%= @articulo.descripcion.to_s %>
+</p>
